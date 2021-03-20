@@ -1,37 +1,44 @@
 import turtle
+#import pygame
 import os
 wn=turtle.Screen()
 wn.title("Heads Roll")
-wn.bgcolor("lightblue")
+wn.bgpic("/Users/harshitachadha/Desktop/bg.gif")
 wn.setup(width=800,height=600)
 wn.tracer(0)
+wn.register_shape("/Users/harshitachadha/Desktop/test.gif")
+wn.register_shape("/Users/harshitachadha/Desktop/right.gif")
+wn.register_shape("/Users/harshitachadha/Desktop/left.gif")
 #score
 score_a=0
 score_b=0
+
 #paddle A
 paddle_a=turtle.Turtle()
 paddle_a.speed(0)
-paddle_a.shape("square")
-paddle_a.color("gold")
-paddle_a.shapesize(stretch_wid=5, stretch_len=1)
+paddle_a.shape("/Users/harshitachadha/Desktop/left.gif")
+#paddle_a.color("gold")
+#addle_a.shapesize(stretch_wid=5, stretch_len=1)
 paddle_a.penup()
 paddle_a.goto(-350,0)
 
 #paddle B
 paddle_b=turtle.Turtle()
 paddle_b.speed(0)
-paddle_b.shape("square")
-paddle_b.color("gold")
-paddle_b.shapesize(stretch_wid=5, stretch_len=1)
+paddle_b.shape("/Users/harshitachadha/Desktop/right.gif")
+#paddle_b.color("gold")
+#paddle_b.shapesize(stretch_wid=5, stretch_len=1)
 paddle_b.penup()
 paddle_b.goto(+350,0)
 
 #ball
 b=turtle.Turtle()
 b.speed(0)
-b.shape("circle")
-b.color("yellowgreen")
-b.shapesize(stretch_wid=1.5, stretch_len=1.5)
+#b.addshape("/Users/harshitachadha/Desktop/test.gif")
+b.shape("/Users/harshitachadha/Desktop/test.gif")
+#b.shape("circle")
+#b.color("yellowgreen")
+#b.size(stretch_wid=1.5, stretch_len=1.5)
 b.penup()
 b.goto(0,0)
 b.dx=2
@@ -39,7 +46,7 @@ b.dy=-2
 #pen
 pen=turtle.Turtle()
 pen.speed(0)
-pen.color("magenta")
+pen.color("gold")
 pen.penup()
 pen.hideturtle()
 pen.goto(0,260)
